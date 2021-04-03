@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-size: 26px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    width: 100%;
+    backdrop-filter: blur(20px);
+}
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.titull {
+    position: absolute;
+    top: 28vh;
+    left: 10vw;
+    right: 10vw;
+    padding: 5rem 5rem;
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    cursor: default;
+}
+
+.title {
+    font-size: 5.5vw;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.motto {
+    color: white;
+    font-size: 2vw;
+    transition: all 0.3s ease 0s;
+}
+
+.motto:hover {
+    color: red;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    padding: 10px 20px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+    color: white;
+    border: 3px solid red;
+    background: red;
+    text-decoration: none;
+}
+
+li,
+a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav_links {
+    list-style: none;
+    margin: 0px;
+}
+
+.nav_links li {
+    display: inline-block;
+    margin: 0px 1.2em;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.nav_links li a:hover {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.ig {
+    font-size: 3rem;
+    color: red;
+    transition: all 0.3s ease 0s;
+}
+
+.ig:hover {
+    color: white;
+    font-size: 3.3rem;
+}
+
+.section1 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.content{
+    backdrop-filter: blur(60px) brightness(0.2);
+    color: white;
+    padding: 0px 10rem;
+}
+
+.about {
+    color: white;
+    height: 90vh;
+    padding: 15rem 0px;
+}
+
+.projects-div{
+    color: white;
+    height: 90vh;
+    padding: 10rem 0px;
+}
+
+.projects{
+    color: white;
+}
+
+.grid-container{
+    justify-items: center;
+}
+
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 400px;
+}
+
+.parent {
+    border-radius: 50px;
+    width: 100%; 
+    margin: 1px;
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+
+.bg-one {
+    background-image: url(/assets/placeholder.jpg); 
+    background-position: center; 
+    background-size: 200%;
+}
+
+.bg-two {
+    background-image: url(/assets/placeholder.jpg);
+    background-position: center; 
+    background-size: 200%;
+}
+
+.bg-three {
+    background-image: url(/assets/placeholder.jpg);
+    background-position: center; 
+    background-size: 200%;
+}
+
+.projekt-name {
+    display: none;
+    font-size: 40px;
+    color: #ffffff !important;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.parent:hover .child, .parent:focus .child {
+    transform: scale(1.2);
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+    display: block;
+}
+
+.parent:hover h1, .parent:focus h1 {
+    display: block;
+}
+
+.child:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px) brightness(0.5);
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    zoom: 1.3;
+    filter: hue-rotate(-20deg)
+}
