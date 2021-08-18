@@ -1,0 +1,100 @@
+.footer {
+    z-index: 2;
+    --footer-background: black;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+  }
+  body .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2em;
+    background: var(--footer-background);
+    filter: url("#blob");
+  }
+  body .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    -webkit-animation: bubble-size var(--time, 30s) ease-in infinite var(--delay, 10s), bubble-move var(--time, 30s) ease-in infinite var(--delay, 30s);
+            animation: bubble-size var(--time, 30s) ease-in infinite var(--delay, 10s), bubble-move var(--time, 30s) ease-in infinite var(--delay, 30s);
+    transform: translate(-50%, 100%);
+  }
+  body .footer .content {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 6em;
+    background: var(--footer-background);
+  }
+  body .footer .content a, body .footer .content p {
+    color: white;
+    text-decoration: none;
+  }
+  body .footer .content b {
+    color: white;
+  }
+  body .footer .content p {
+    margin: 0;
+    font-size: 0.5em;
+  }
+  body .footer .content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+body .footer .content > div > div > span {
+    font-size: 0.7em;
+    align-items: center;
+    color: white;
+    opacity: 0.8;
+}
+  body .footer .content > div > div > * {
+    margin-right: 0.5rem;
+  }
+  body .footer .content > div .image {
+    align-self: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @-webkit-keyframes bubble-size {
+    0%, 75% {
+      width: var(--size, 4rem);
+      height: var(--size, 4rem);
+    }
+    100% {
+      width: 0rem;
+      height: 0rem;
+    }
+  }
+  
+  @keyframes bubble-size {
+    0%, 75% {
+      width: var(--size, 4rem);
+      height: var(--size, 4rem);
+    }
+    100% {
+      width: 0rem;
+      height: 0rem;
+    }
+  }
+  @-webkit-keyframes bubble-move {
+    0% {
+      bottom: -4rem;
+    }
+    100% {
+      bottom: var(--distance, 10rem);
+    }
+  }
+  @keyframes bubble-move {
+    0% {
+      bottom: -4rem;
+    }
+    100% {
+      bottom: var(--distance, 10rem);
+    }
+  }
