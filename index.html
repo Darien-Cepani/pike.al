@@ -13,11 +13,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/473af54a53.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/marquee.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,8 +34,10 @@
     <div class="section">
         <nav>
             <ul class="nav_links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">Who are we?</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Get a quote</a></li>
             </ul>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO" class="ig"><i class="fab fa-instagram"></i></a>
         </nav>
@@ -42,8 +45,8 @@
         <div class="titull left">
             <div class="textContainer">
             <h1>
-                <div id="container">
-                    <h1 style="display: inline-block; color: black; font-size: 2em; margin-right: 10px;">Welcome to</h1>
+                <h1 style="display: inline-block; color: black; font-size: 3em; margin-right: 10px;">Welcome to</h1>
+                <div id="container" style="display: inline-block;">
                     <span id="text1"></span>
                     <span id="text2"></span>
                 </div>
@@ -63,7 +66,7 @@
             </h1>
             <p class="motto">Dotting the <span style="font-weight:bold;">i</span>'s.</p>
         </div>
-            <a class="custom-btn button right-align" href="#about">Learn More</a>
+            <a class="custom-btn button right-align" href="#about">Get to know us!</a>
         </div>
 
         <div class="right">
@@ -86,10 +89,10 @@
     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
     </defs>
     <g class="parallax">
-    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,0,0,0.3" />
-    <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(255,0,0,0.5)" />
-    <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,0,0,0.8)" />
-    <use xlink:href="#gentle-wave" x="48" y="8" fill="#F00" />
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.3" />
+    <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(0,0,0,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="9" fill="rgba(0,0,0,0.8)" />
+    <use xlink:href="#gentle-wave" x="48" y="8" fill="#000" />
     </g>
     </svg>
     </div>
@@ -98,17 +101,62 @@
     </div>
     
     <div class="content flex">
-        <div class="wrapper">
-
+        <div class="about-wrapper">
             <div class="about" id="about">
-                <h1>About Us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde facere quia in eaque quod non voluptatum fugit. Deleniti ipsam, non autem consectetur perspiciatis animi, odio, dolores magnam quam odit laborum!</p>
-                <img src="assets/img/placeholder.jpg">
+                <h1>Who are we?</h1>
+                <p>A highly dedicated group with a focus on bringing to you the solution you need for all of your tech problems.</p>
+                <p>We bring your ideas to life with the speed and quality you deserve.</p>
             </div>
-
+            <div class="illustration">
+                <img src="assets/svg/white-blob.svg" alt="" class="white-blob">
+                <img src="assets/svg/CodingIllustration.svg" alt="" class="guy">
+            </div>
         </div>
+    </div>
 
-        <div class="projects about">
+    <div class="content flex" id="technologies">
+        <h1 style="color: white; text-align: center; font-size: 2em; margin-bottom: 1em;">What we know</h1>
+        <div class="marquee">
+            <ul class="marquee-content">
+              <li><i class="fab fa-github"></i>GitHub</li>
+              <li><i class="fab fa-vuejs"></i>VueJS</li>
+              <li><i class="fab fa-bootstrap"></i>BootStrap</li>
+              <li><i class="fab fa-cloudflare"></i>CloudFlare</li>
+              <li><i class="fab fa-css3-alt"></i>CSS3</li>
+              <li><i class="fab fa-html5"></i>HTML5</li>
+              <li><i class="fab fa-digital-ocean"></i>DigitalOcean</li>
+              <li><i class="fab fa-elementor"></i>Elementor</li>
+              <li><i class="fab fa-figma"></i>Figma</li>
+              <li><i class="fab fa-git-alt"></i>Git</li>
+            </ul>
+          </div>
+          <div class="marquee">
+            <ul class="marquee-content line2">
+                <li><i class="fab fa-angular"></i>Angular</li>
+                <li><i class="fab fa-node"></i>NodeJS</li>
+                <li><i class="fab fa-wordpress"></i>WordPress</li>
+                <li><i class="fab fa-aws"></i>AWS</li>
+                <li><i class="fab fa-docker"></i>Docker</li>
+                <li><i class="fab fa-android"></i>Android Apps</li>
+                <li><i class="fab fa-app-store-ios"></i>iOS Apps</li>
+                <li><i class="fab fa-python"></i>Python</li>
+                <li><i class="fab fa-slack"></i>Slack</li>
+                <li><i class="fab fa-yarn"></i>Yarn</li>
+                <li><i class="fab fa-gitlab"></i>GitLab</li>
+                <li><i class="fab fa-jira"></i>Jira</li>
+                <li><i class="fab fa-js-square"></i>JavaScript</li>
+                <li><i class="fab fa-keybase"></i>KeyBase</li>
+                <li><i class="fab fa-laravel"></i>Laravel</li>
+                <li><i class="fab fa-less"></i>Less</li>
+                <li><i class="fab fa-linode"></i>LiNode</li>
+                <li><i class="fab fa-npm"></i>NPM</li>
+                <li><i class="fab fa-php"></i>PHP</li>
+                <li><i class="fab fa-react"></i>ReactJS</li>
+          </div>
+    </div>
+
+    <div class="content flex">
+        <div class="projects" id="portfolio">
             <!-- <h1>Our Projects</h1> -->
             <div class="cont">
                 <div class="slider"></div>
@@ -252,10 +300,10 @@
             </div>
             <div class="content">
               <div>
-                <div><b>Denis Ismailaj</b><span>CEO</span></div>
-                <div><b>Rei Arifi</b><span>CTO</span></div>
-                <div><b>Darien Cepani</b><span>Web Developer</span></div>
-                <div><b>Hysen Ndregjoni</b><span>Programmer</span></div>
+                <div><b>Denis Ismailaj</b><span>Administrator</span></div>
+                <div><b>Rei Arifi</b><span>Se dim akoma</span></div>
+                <div><b>Darien Cepani</b><span>Web Designer</span></div>
+                <div><b>Hysen Ndregjoni</b><span>Vezhgus</span></div>
               </div>
               <div><img class="footerLogo" src="assets/svg/pike.al.svg">
                 <p>©2021 All Rights Reserved</p>
@@ -274,6 +322,7 @@
 
         <script src="js/textRotate.js"></script>
         <script src="js/slider.js"></script>
+        <script src="js/marquee.js"></script>
 </body>
 
 </html>

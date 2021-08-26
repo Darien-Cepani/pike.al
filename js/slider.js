@@ -183,3 +183,12 @@ $(document).ready(function() {
 	});
 });
 
+
+function marqueePlay(){
+	document.querySelectorAll('marquee').start();
+}
+
+function marqueePause(){
+	this.stop();
+}
+	
