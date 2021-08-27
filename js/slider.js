@@ -182,13 +182,3 @@ $(document).ready(function() {
 		if (e.which === 37) navigateLeft();
 	});
 });
-
-
-function marqueePlay(){
-	document.querySelectorAll('marquee').start();
-}
-
-function marqueePause(){
-	this.stop();
-}
-	

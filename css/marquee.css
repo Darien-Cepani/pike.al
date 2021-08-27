@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
 :root {
   --marquee-width: 100vw;
   --marquee-height: 20vh;
@@ -10,12 +8,15 @@
 }
 
 .marquee {
+  font-family: 'Ubuntu', sans-serif;
   width: var(--marquee-width);
   height: var(--marquee-height);
   background-color: #000;
   color: #eee;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .marquee:before, .marquee:after {
@@ -43,19 +44,17 @@
   display: flex;
   animation: scrolling var(--marquee-animation-duration) linear infinite;
   animation-fill-mode: both;
-  animation-iteration-count:infinite;
 }
 
 .line2 {
     animation: scrollingSlow var(--marquee-animation-duration) linear infinite;
     animation-fill-mode: both;
-    animation-iteration-count:infinite;
+    margin: 0;
 }
 
 .line3 {
     animation: scrollingFast var(--marquee-animation-duration) linear infinite;
     animation-fill-mode: both;
-    animation-iteration-count:infinite;
 }
 
 .marquee-content:hover {
@@ -66,7 +65,7 @@
     transform: scale(1.1);
     opacity: 1;
     color: white;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5) !important;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5) ;
     cursor: pointer;
 }
 
@@ -101,11 +100,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
+  text-align: center;
   flex-shrink: 0;
   width: var(--marquee-element-width);
   max-height: 100%;
-  font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
   white-space: nowrap;
   opacity: 0.5;
   transition: all 150ms ease-in-out;
