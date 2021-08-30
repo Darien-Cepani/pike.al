@@ -414,12 +414,10 @@ position: relative;
     width: 100%;
     height: 100%;
     transform: translate3d(0, 0, 0);
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text;
-    -webkit-background-clip: text !important;
+    color: transparent !important;
+    clip-path: margin-box;
     font-size: 35vw;
     font-weight: 800;
-    color: #000;
     z-index: 2;
     will-change: transform;
     -webkit-user-select: none;
@@ -428,12 +426,15 @@ position: relative;
             user-select: none;
   }
   .slide__text {
-    font-size: 5vw;
+    font-size: 3vw;
     font-weight: 800;
     text-transform: uppercase;
     transform: translate3d(0, 0, 0);
     letter-spacing: 12px;
     color: #fff;
+    position: absolute;
+    bottom: 1.5em;
+    left: 2em;
     will-change: transform;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -449,7 +450,7 @@ position: relative;
   }
   .slide--1__darkbg {
     left: 0%;
-    background: url("/assets/img/finitefields.png") center center no-repeat;
+    background: url("/assets/img/finitefields1.png") center center no-repeat;
     background-size: cover;
     background-position: 0px center, 0px center;
     transform: translate3d(0, 0, 0);
@@ -462,16 +463,17 @@ position: relative;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(11, 15, 39, 0.83);
+    background-color: #0007;
   }
   .slide--1__letter {
-    background: url("/assets/img/finitefields.png") center center no-repeat;
     background-position: 0px center, 0px center;
     background-size: cover;
+    background-color: #FFF5;
+    backdrop-filter: blur(10px);
   }
   .slide--2__darkbg {
     left: -50%;
-    background: url("/assets/img/albanrenovation.png") center center no-repeat;
+    background: url("/assets/img/albanrenovation1.png") center center no-repeat;
     background-size: cover;
     background-position: 0px center, 0px center;
     transform: translate3d(0, 0, 0);
@@ -484,80 +486,8 @@ position: relative;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(11, 15, 39, 0.83);
+    background-color: #0007;
   }
-  .slide--2__letter {
-    background: url("/assets/img/albanrenovation.png") center center no-repeat;
-    background-position: 0px center, 0px center;
-    background-size: cover;
-  }
-  .slide--3__darkbg {
-    left: -100%;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--3-min-min.jpg") center center no-repeat;
-    background-size: cover;
-    background-position: 0px center, 0px center;
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
-  }
-  .slide--3__darkbg:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(11, 15, 39, 0.83);
-  }
-  .slide--3__letter {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--3-min-min.jpg") center center no-repeat;
-    background-position: 0px center, 0px center;
-    background-size: cover;
-  }
-  .slide--4__darkbg {
-    left: -150%;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--4-min-min.jpg") center center no-repeat;
-    background-size: cover;
-    background-position: 0px center, 0px center;
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
-  }
-  .slide--4__darkbg:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(11, 15, 39, 0.83);
-  }
-  .slide--4__letter {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--4-min-min.jpg") center center no-repeat;
-    background-position: 0px center, 0px center;
-    background-size: cover;
-  }
-  .slide--5__darkbg {
-    left: -200%;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg") center center no-repeat;
-    background-size: cover;
-    background-position: 0px center, 0px center;
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
-  }
-  .slide--5__darkbg:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(11, 15, 39, 0.83);
-  }
-  .slide--5__letter {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg") center center no-repeat;
-    background-position: 0px center, 0px center;
-    background-size: cover;
-  }
-  
   .nav {
     position: absolute;
     bottom: 25px;
