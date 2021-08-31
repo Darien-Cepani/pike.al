@@ -86,6 +86,7 @@
   display: flex;
   animation: scrolling var(--marquee-animation-duration) linear infinite;
   animation-fill-mode: both;
+  transition: animation-play-state 250ms ease-in-out;
 }
 
 .line2 {
@@ -131,12 +132,12 @@
 
 @keyframes scrolling {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)/1.4)); }
+  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
 }
 
 @keyframes scrollingSlow {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)/1.2)); }
+    100% { transform: translateX(0); }
+    0% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
 }
   
 @keyframes scrollingFast {
