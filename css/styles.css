@@ -143,7 +143,7 @@ nav {
     display: inline-block;
     position: relative;
     width: 100%;
-    margin: 25vh auto;
+    margin: 15vh auto;
     border-radius: 50px;
     cursor: default;
     text-align: left;
@@ -153,21 +153,13 @@ nav {
     margin-left: 15%;
 }
 
-#container {
-	position: absolute;
-	margin: 0 auto;
-    padding: 0;
-	width: 50%;
-    height: 1.5em;
-	filter: url(#threshold) blur(0.6px);
+.dud{
+  color: rgba(255, 0, 0, 0.5);
+  font-weight: normal;
 }
 
-#filters{
-    height: 1.5em;
-}
-
-#text1, #text2 {
-	position: absolute;
+.text {
+	position: relative;
 	width: 100%;
 	display: inline-block;
     font-family: "Ubuntu", sans-serif;

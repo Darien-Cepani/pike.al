@@ -1,80 +1,71 @@
-const elts = {
-	text1: document.getElementById("text1"),
-	text2: document.getElementById("text2")
-};
-
-const texts = [
-	"pike.al",
-	"your solution",
-	"the future"
-];
-
-const morphTime = 1;
-const cooldownTime = 2;
-
-let textIndex = texts.length - 1;
-let time = new Date();
-let morph = 0;
-let cooldown = cooldownTime;
-
-elts.text1.textContent = texts[textIndex % texts.length];
-elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-
-function doMorph() {
-	morph -= cooldown;
-	cooldown = 0;
-	
-	let fraction = morph / morphTime;
-	
-	if (fraction > 1) {
-		cooldown = cooldownTime;
-		fraction = 1;
+class TextScramble {
+	constructor(el){
+	  this.el = el;
+	  this.chars = '!<>-_\\/[]{}—=+*^?#________';
+	  this.update = this.update.bind(this);
 	}
 	
-	setMorph(fraction);
-}
-
-function setMorph(fraction) {
-	elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-	elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+	setText(newText){
+	  const oldText = this.el.innerText;
+	  const length = Math.max(oldText.length,newText.length);
+	  const promise = new Promise((resolve)=>this.resolve = resolve);
+	  
+	  this.queue = [];
+	  for(let i = 0;i<length;i++){
+		const from = oldText[i] || '';
+		const to  = newText[i] || '';
+		const start = Math.floor(Math.random()*40);
+		const end = Math.floor(Math.random()*40) + start;
+		this.queue.push({from,to,start,end});
+	  }
+	  
+	  cancelAnimationFrame(this.frameRequest);
+	  this.frame = 0;
+	  this.update();
+	  return promise;
+	}
 	
-	fraction = 1 - fraction;
-	elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-	elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-	
-	elts.text1.textContent = texts[textIndex % texts.length];
-	elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-}
-
-function doCooldown() {
-	morph = 0;
-	
-	elts.text2.style.filter = "";
-	elts.text2.style.opacity = "100%";
-	
-	elts.text1.style.filter = "";
-	elts.text1.style.opacity = "0%";
-}
-
-function animate() {
-	requestAnimationFrame(animate);
-	
-	let newTime = new Date();
-	let shouldIncrementIndex = cooldown > 0;
-	let dt = (newTime - time) / 1000;
-	time = newTime;
-	
-	cooldown -= dt;
-	
-	if (cooldown <= 0) {
-		if (shouldIncrementIndex) {
-			textIndex++;
-		}
+	update(){
+	  let output = '';
+	  let complete = 0;
+	  for(let i=0,n=this.queue.length;i<n;i++){
+		let {from,to,start,end,char} = this.queue[i];
 		
-		doMorph();
-	} else {
-		doCooldown();
+		if(this.frame >= end){
+		  complete++;
+		  output += to;
+		}else if(this.frame >= start){
+		  if(!char || Math.random() < 0.28){char = this.randomChar();this.queue[i].char = char;}
+		  output += `<span class='dud'>${char}</span>`;
+		}else {
+		  output += from;
+		}
+	  }
+	  this.el.innerHTML = output;
+	  if(complete === this.queue.length){this.resolve();}else{
+		this.frameRequest = requestAnimationFrame(this.update);this.frame++;}
 	}
-}
-
-animate();
+	
+	randomChar(){
+	  return this.chars[Math.floor(Math.random() * this.chars.length)]
+	}
+  }
+  
+  const phrases = [
+	'pike al',
+	'your solution',
+	'the future'
+  ]
+  
+  const el = document.querySelector('.text');
+  const fx = new TextScramble(el);
+  
+  let counter = 0;
+  const next = () => {
+	fx.setText(phrases[counter]).then(()=>{
+	  setTimeout(next,3500)
+	})
+	counter = (counter+1) % phrases.length
+  }
+  
+  next()
