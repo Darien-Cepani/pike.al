@@ -5,6 +5,13 @@
     position: relative;
     grid-area: footer;
   }
+  .footerLogo{
+    width: 3em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    filter:grayscale() brightness(100);
+    margin: 0.5em auto;
+}
   body .footer .bubbles {
     position: absolute;
     top: 0;

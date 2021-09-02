@@ -52,9 +52,8 @@ class TextScramble {
   }
   
   const phrases = [
-	'pike al',
-	'your solution',
-	'the future'
+	'pike.al',
+	'your solution'
   ]
   
   const el = document.querySelector('.text');

@@ -3,7 +3,7 @@ $(document).ready(function() {
 	const $slider = $('.slider');
 	const $nav = $('.nav');
 	const winW = $(window).width();
-	const animSpd = 750; // Change also in CSS
+	const animSpd = 550; // Change also in CSS
 	const distOfLetGo = winW * 0.001;
 	let curSlide = 1;
 	let animation = false;
@@ -30,10 +30,14 @@ $(document).ready(function() {
 		const firstLetter = arrCitiesDivided[city][0].charAt(0);
 
 		const $slide =
-					$(`<div data-target="${numSlide}" class="slide slide--${numSlide}">
-							<div class="slide__darkbg slide--${numSlide}__darkbg"></div>
-							<div class="slide__text-wrapper slide--${numSlide}__text-wrapper"></div>
-						</div>`);
+					$(`
+
+					<div data-target="${numSlide}" class="slide slide--${numSlide}">
+						<div class="slide__darkbg slide--${numSlide}__darkbg"></div>
+						<div class="slide__text-wrapper slide--${numSlide}__text-wrapper"></div>
+						</div>
+						
+						`);
 
 		const letter = 
 					$(`<div class="slide__letter slide--${numSlide}__letter">
