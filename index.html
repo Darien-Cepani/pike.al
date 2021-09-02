@@ -21,6 +21,7 @@
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/marquee.css" rel="stylesheet">
     <link href="css/slider.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,8 +35,21 @@
 <div class="header">
 
     <div class="section">
-        <nav>
-            <ul class="nav_links">
+        <div class="mobileNav">
+            <nav class="mobNav">
+                <img class="logo-nav grow" src="assets/svg/pike.al.svg" id="navigation">
+                <ul>
+                  <li><a href="#">Menu link</a></li>
+                  <li><a href="#">And another</a></li>
+                  <li><a href="#">One more</a></li>
+                  <li><a href="#">Last one</a></li>
+                </ul>
+              </nav>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO" class="ig"><i class="fab fa-instagram"></i></a>
+                
+        </div>
+        <nav class="desktopNav">
+            <ul class="deskNav">
                 <li><a href="#about">Who are we?</a></li>
                 <li><a href="#technologies">Technologies</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -309,6 +323,7 @@
         <script src="js/textRotate.js"></script>
         <script src="js/slider.js"></script>
         <script src="js/marquee.js"></script>
+        <script src="js/menu.js"></script>
 </body>
 
 </html>

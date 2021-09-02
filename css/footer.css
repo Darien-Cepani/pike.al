@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 2em;
+    height: 1em;
     background: var(--footer-background);
     filter: url("#blob");
   }
@@ -34,7 +34,7 @@
     z-index: 2;
     display: flex;
     justify-content: space-between;
-    padding: 2em 6em;
+    padding: 3em 6em;
     background: var(--footer-background);
   }
   body .footer .content a, body .footer .content p {
@@ -105,3 +105,25 @@ body .footer .content > div > div > span {
       bottom: var(--distance, 10rem);
     }
   }
+
+  /* Small screens */
+@media screen and (max-width: 1024px) {
+
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+
+  .footerLogo{
+    width: 2em;
+    margin: 0.5em auto;
+  }
+  body .footer .content {
+    padding: 3em 1em;
+  }
+}

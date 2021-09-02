@@ -16,60 +16,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    padding: 1em 3em;
-    z-index: 2;
-    background-color: white;
-}
-.nav_links {
-  list-style: none;
-  margin: 0px;
-}
-.nav_links li,
-a {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    font-size: 0.8em;
-    color: #777;
-    text-decoration: none;
-}
-.nav_links li {
-    display: inline-block;
-    margin: 0px 0.5em;
-}
-.nav_links a {
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 50px;
-}
-.nav_links a:hover {
-    color: white;
-    background-color: red;
-}
-.ig {
-    font-size: 1.1em;
-    color: white;
-    transition: all 0.3s ease 0s;
-    border-radius: 50px;
-    padding: 5px 10px 4px 10px;
-    background-color: red;
-}
-.ig:hover {
-    color: white;
-    background-color: black;
-    
-}
-.logo-nav{
-  width: 2.7em;
-  display: none;
-}
 .section {
   width: 100vw;
   height: 100vh;
@@ -294,21 +240,13 @@ position: relative;
 /* Mobile */
 @media screen and (max-width: 480px) {
   
-  .logo-nav{
-    display: inline-block;
-  }
-  nav{
-    padding: 0.5em 1em;
-  }
-  .ig{
-    display: none;
-  }
   .section{
     height: 150vh;
   }
   .head{
     width: 85vw;
-    margin: 15vh auto;
+    padding: 27vh 0;
+    margin: 0 auto;
     display:flex;
     flex-direction: column-reverse;
     z-index: 10;

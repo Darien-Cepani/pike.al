@@ -1,0 +1,134 @@
+.desktopNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1em 3em;
+    z-index: 2;
+    background-color: white;
+}
+
+.deskNav {
+  list-style: none;
+  margin: 0px;
+}
+.deskNav li,
+a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #777;
+    text-decoration: none;
+}
+.deskNav li {
+    display: inline-block;
+    margin: 0px 0.5em;
+}
+.deskNav a {
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+}
+.deskNav a:hover {
+    color: white;
+    background-color: red;
+}
+.ig {
+    font-size: 1.1em;
+    color: white;
+    transition: all 0.3s ease 0s;
+    border-radius: 50px;
+    padding: 5px 10px 4px 10px;
+    background-color: red;
+}
+.ig:hover {
+    color: white;
+    background-color: black;
+    
+}
+.logo-nav{
+  width: 2.7em;
+  display: none;
+}
+
+  .mobileNav{
+    display: none;
+}
+
+  /* Tablets */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .ig{
+        display: none;
+    }
+    .logo-nav{
+        width: 2.7em;
+        display: inline-block;
+        z-index: 15;
+      }
+      #navigation{
+          z-index: 1000;
+      }
+    .desktopNav{
+        display: none;
+    }
+    .mobileNav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding:1em;
+        z-index: 15;
+        background-color: none;
+    }
+    .deskNav{
+        display: none;
+    }
+    .mobNav {
+        position: fixed;
+        border-radius: 50px;
+        top: 1em;
+        width: 3.2em;
+        height: 1.8em;
+        background-color: white;
+        font-family: "Baloo", sans-serif;
+      }
+      .mobNav ul {
+        list-style-type: none;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        color: #fff;
+        width: 100%;
+      }
+      .mobNav ul li {
+        display: block;
+      }
+      .mobNav ul li a {
+        display: block;
+        font-size: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #9d032c;
+        padding: 5px;
+        transition-duration: 200ms;
+      }
+      .mobNav ul li a:hover {
+        color: #fff;
+      }
+}
+  
