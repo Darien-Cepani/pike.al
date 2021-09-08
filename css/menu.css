@@ -59,14 +59,8 @@ a {
 }
 
   /* Tablets */
-@media screen and (max-width: 768px) {
-
-}
-
-/* Mobile */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 703px) {
     .ig{
-        display: none;
     }
     .logo-nav{
         width: 2.7em;

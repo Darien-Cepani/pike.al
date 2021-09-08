@@ -225,20 +225,86 @@ position: relative;
 }
 .heading{
   font-size: 2em;
+  color: white;
+  margin: 1em auto;
 }
 
 /* Small screens */
-@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1300px) {
+  .section{
+    height: 100vh;
+  }
+  .head{
+    width: 85vw;
+    padding: 15vh 0;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column-reverse;
+    z-index: 10;
+  }
+  .left{
+    text-align: left;
+  }
+  .right{
+    display: none;
+  }
+  /* .logo{
+    width: 7em;
+    top: auto;
+    left: 1em;
+    position: relative;
+  }
+  .blob{
+    top: -3em;
+    left: -0.5em;
+    width: 40vmax;
+  } */
+  .textContainer{
+    margin: 0;
+  }
+  .welcome{
+    font-size: 2em;
+  }
+  .text{
+    font-size: 2em;
+  }
+  .motto{
+    margin-top: 1em;
+  }
+  .margin-left{
+    margin-left: 20vw;
+    margin-top: 5em;
+  }
+  .about{
+    width: 100%;
+    scroll-margin-top: 10vh;
+    top: 3em;
+  }
+  .about p{
+    font-size: 0.8em;
+  }
+  .about-wrapper{
+    flex-direction: column;
+  }
+  .guy{
+    width: 200px;
+    margin: 3em auto;
+  }
+  .white-blob{
+    width: 13em;
+    top: 2.5em;
+    left: -2em;
+  }
+  .heading{
+    font-size: 1.7em;
+    color: white;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
 }
 
 /* Tablets */
 @media screen and (max-width: 768px) {
-
-}
-
-/* Mobile */
-@media screen and (max-width: 480px) {
   
   .section{
     height: 150vh;

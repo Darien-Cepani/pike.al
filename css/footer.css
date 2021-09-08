@@ -114,11 +114,6 @@ body .footer .content > div > div > span {
 /* Tablets */
 @media screen and (max-width: 768px) {
 
-}
-
-/* Mobile */
-@media screen and (max-width: 480px) {
-
   .footerLogo{
     width: 2em;
     margin: 0.5em auto;
