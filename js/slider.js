@@ -185,4 +185,11 @@ $(document).ready(function() {
 		if (e.which === 39) navigateRight();
 		if (e.which === 37) navigateLeft();
 	});
+
+	$('.slide--1').on('click', function(){
+		location.href = "https://finitefields.dev/";
+	});
+	$('.slide--2').on('click', function(){
+		location.href = "pages/comingsoon.html";
+	});
 });

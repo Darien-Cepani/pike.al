@@ -307,11 +307,11 @@ position: relative;
 @media screen and (max-width: 768px) {
   
   .section{
-    height: 150vh;
+    height: 100vh;
   }
   .head{
     width: 85vw;
-    padding: 27vh 0;
+    padding: 10vh 0;
     margin: 0 auto;
     display:flex;
     flex-direction: column-reverse;

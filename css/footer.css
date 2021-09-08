@@ -119,6 +119,16 @@ body .footer .content > div > div > span {
     margin: 0.5em auto;
   }
   body .footer .content {
-    padding: 3em 1em;
+    padding: 25vh 1em 1em 1em;
+  }
+  .footer{
+    margin-top: 0;
+  }
+  body .footer .content b {
+    color: white;
+    font-size: 0.7em;
+  }
+  body .footer .bubbles {
+    display: none;
   }
 }
